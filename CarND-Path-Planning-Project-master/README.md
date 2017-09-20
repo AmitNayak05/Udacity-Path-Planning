@@ -10,7 +10,7 @@ The simulator provides the localization data of the main car which includes the 
 This sensor fusion data along with the current state of car is used for path planning. The sensor fusion data contains the id, and state of the vehicle similar to the main car state. This data is anaysed to avoid collliding with vehicles in lane as well as decide when to change lane. Main importance is given to vehicle within 30 meters of the main vehilce in current as well as adjacent lanes.
 
 #### Waypoint 
-Widely spaced waypoints at distance of 30 , 60 and 90 meters from the vehicle are selected. These waypoints are shifted from global to local coordiante system with the main vehicle being at ceneter. Spline is fit to these waypoints.
+Widely spaced waypoints at distance of 30 , 60 and 90 meters from the vehicle are selected. These waypoints are shifted from global to local coordiante system with the main vehicle being at center. Spline is fit to these waypoints.
 
 The final path consistes of the unreached path from last iteration along with the path in front of the vehicle. Then based on the desired velocity, the waypoint x coordinates are spaced and the y coordiantes are calculated based on the spline fit. This generates the waypoint and trajectory to follow.
 
