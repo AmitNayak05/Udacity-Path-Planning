@@ -15,8 +15,8 @@ Widely spaced waypoints at distance of 30 , 60 and 90 meters from the vehicle ar
 The final path consistes of the unreached path from last iteration along with the path in front of the vehicle. Then based on the desired velocity, the waypoint x coordinates are spaced and the y coordiantes are calculated based on the spline fit. This generates the waypoint and trajectory to follow.
 
 #### Avoid Collision and Lane Change
-In order to avoid collision and decide when to change lane, the sensor fusion data is analyzed. The sensor fusion data is iterated to find vehicles in the same lane as the main vehicle and if found, the reference speed of the vehicle was gradually reduced. The change is reference speed affected how the waypoints are spaced out.
+In order to avoid collision and decide when to change lane, the sensor fusion data is analyzed. The sensor fusion data is iterated to find vehicles in the same lane as the main vehicle and if found, the reference speed of the vehicle was gradually reduced. The change in reference speed affect how the waypoints are spaced out.
 
-When the main vehicle found any car in the same lane and within 30 meters in front, it looked for vehicles in lanes adjacent to it. Based on the vehicle speed and location, its future location is predicted. If there is no vehicle in the adjacent lane within 30 meters in front as well as 15 meters behind it, then the vehicle assumes that its safe to change lanes to that lane.
+When the main vehicle found any car in the same lane and within 30 meters in front, it looks for vehicles in lanes adjacent to it. Based on the vehicle speed and location, their future location is predicted. If there is no vehicle in the adjacent lane within 30 meters in front as well as 15 meters behind it, then the main car assumes that its safe to change lanes to that lane.
 
-Based on the lane change decision, the future points added to the trajectory take into consideration the lane change as the selection of waypoints ahead of the car is selected based on the lane selected.
+Based on the lane change decision, the future points are added to the trajectory that take into consideration the lane change, as the selection of waypoints ahead of the car is selected based on the lane selected.
